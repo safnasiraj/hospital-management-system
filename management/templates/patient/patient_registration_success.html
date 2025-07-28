@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="card mt-4">
+  <div class="card-header bg-success text-white">
+    <h3>Registration Successful</h3>
+  </div>
+  <div class="card-body">
+    <p>Thank you for registering as a patient with Lake View Hospital.</p>
+    <a href="{% url 'patient_login' %}" class="btn btn-primary">Proceed to Login</a>
+  </div>
+</div>
+{% endblock %}

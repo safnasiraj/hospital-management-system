@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="card mt-4">
+  <div class="card-header bg-warning">
+    <h4>Update Your Profile</h4>
+  </div>
+  <div class="card-body">
+    <form method="POST">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <button type="submit" class="btn btn-success">Save Changes</button>
+      <a href="{% url 'patient_welcome' %}" class="btn btn-secondary">Cancel</a>
+    </form>
+  </div>
+</div>
+{% endblock %}

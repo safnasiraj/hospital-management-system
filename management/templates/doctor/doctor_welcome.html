@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="card mt-4">
+  <div class="card-header bg-primary text-white">
+    <h3>Welcome, Dr. {{ name }}</h3>
+    <h4>Doctor ID : {{ id }}</h4>
+  </div>
+  <div class="card-body">
+    <p>You are now logged in to the Lake View Hospital system.</p>
+
+    <ul>
+      <a href="{% url 'patients_view' %}" class="btn btn-outline-primary mt-2">View Patient Details</a>
+      <a href="{% url 'patient_register' %}" class="btn btn-outline-primary mt-2">Add Missing Patient</a>
+      <a href="{% url 'doctor_update' %}" class="btn btn-outline-primary mt-2">Update Profile</a>
+      <a href="{% url 'doctor_delete' %}" class="btn btn-outline-primary mt-2">Delete Profile</a>
+    </ul>
+
+    <a href="{% url 'home' %}" class="btn btn-secondary mt-3">Go to Home</a>
+  </div>
+</div>
+{% endblock %}

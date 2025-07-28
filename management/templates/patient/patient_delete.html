@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container mt-5">
+  <div class="card mx-auto" style="max-width: 400px;">
+    <div class="card-header text-center">
+      <h3>Patient Portal</h3>
+    </div>
+    <div class="card-body">
+      <p class="text-center">Are you sure you want to delete your patient profile?</p>
+      <div class="d-grid gap-2">
+        <a href="{% url 'patient_delete_confirm' %}" class="btn btn-danger">Yes</a>
+        <a href="{% url 'patient_welcome' %}" class="btn btn-secondary">No</a>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

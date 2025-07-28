@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container mt-5 text-center">
+  <div class="alert alert-success">
+    <h4 class="alert-heading">Profile Deleted</h4>
+    <p>Your doctor profile has been successfully deleted.</p>
+    <hr>
+    <a href="{% url 'home' %}" class="btn btn-primary">Back to Home</a>
+  </div>
+</div>
+{% endblock %}
